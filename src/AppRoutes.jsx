@@ -1,9 +1,9 @@
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 
 //Componentes Layouts
-import { Content } from './features/layout/components/Content'
-import { Footer } from './features/layout/components/Footer'
-import { Header } from './features/layout/components/Header'
+import { Content } from './feature/layout/components/content'
+import { Footer } from './feature/layout/components/footer'
+import { Header } from './feature/layout/components/header'
 
 export const AppRoutes = () => {
   return (
