@@ -1,0 +1,449 @@
+.footer {
+  width: 100%;
+  height: 270px;
+  background-color: rgb(28, 28, 28);
+}
+
+hr {
+  width: 100%;
+  align-self: stretch;
+  border: none;
+  border-top: 1px solid rgb(45, 45, 48);
+  margin: 15px 0;
+}
+
+.superior {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .descripcion {
+    width: 25%;
+    height: 70%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      color: rgb(230, 230, 232);
+      font-size: 20px;
+      margin-bottom: 10px;
+
+      img {
+        width: 34px;
+        height: 34px;
+        aspect-ratio: 1 / 1; /* fuerza proporción cuadrada pase lo que pase */
+        flex-shrink: 0; /* evita que el flex del h1 lo comprima */
+        display: block; /* elimina espacio fantasma inline y comportamientos raros de <img> */
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      color: rgb(180, 180, 185);
+      font-size: 15px;
+      max-width: 100%;
+    }
+  }
+
+  .contacto {
+    width: 25%;
+    height: 70%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      color: rgb(230, 230, 232);
+      font-size: 20px;
+      margin: 10px 0;
+      width: 100%;
+      max-width: 200px;
+      padding: 0 10px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 250px;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 3px;
+      list-style: none;
+      padding: 0 10px;
+      color: rgb(180, 180, 185);
+    }
+  }
+
+  .horario {
+    width: 25%;
+    height: 70%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    hr {
+      width: 100%;
+      align-self: stretch;
+      border: none;
+      border-top: 1px solid rgb(45, 45, 48);
+      margin: 15px 0;
+    }
+
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      color: rgb(230, 230, 232);
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .atencion {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+
+      div {
+        flex-direction: column;
+        margin-right: 30px;
+
+        h2 {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          color: rgb(180, 180, 185);
+          font-size: 15px;
+        }
+
+        h3 {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          color: rgb(180, 180, 185);
+          font-size: 15px;
+        }
+      }
+    }
+
+    p {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: rgb(180, 180, 185);
+      font-size: 15px;
+    }
+  }
+}
+
+.inferior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(180, 180, 185);
+    font-size: 15px;
+    margin: 30px;
+  }
+}
+
+/* 1. MÓVIL PEQUEÑO 0px - 480px */
+
+@media (max-width: 480px) {
+  .footer {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .superior {
+    flex-direction: column;
+    justify-content: center;
+
+    /* Las 3 columnas pasan a 90% de ancho y se centran */
+    .descripcion,
+    .contacto,
+    .horario {
+      width: 90%;
+      height: auto;
+      align-items: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .descripcion {
+      h1 {
+        font-size: 17px;
+        justify-content: center;
+
+        img {
+          height: 28px;
+          width: 28px;
+        }
+      }
+
+      p {
+        font-size: 12px;
+        max-width: 90%;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+    .contacto {
+      h1 {
+        font-size: 17px;
+        justify-content: center;
+        max-width: 100%;
+      }
+
+      ul {
+        max-width: 100%;
+      }
+
+      li {
+        font-size: 12px;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    .horario {
+      align-items: center;
+
+      h1 {
+        font-size: 17px;
+        justify-content: center;
+      }
+
+      /* En móvil chico, el horario se apila en vez de ir en fila */
+      .atencion {
+        flex-direction: column;
+        align-items: center;
+
+        div {
+          margin-right: 0;
+          margin-bottom: 10px;
+          align-items: center;
+
+          h2,
+          h3 {
+            font-size: 12px;
+            justify-content: center;
+          }
+        }
+      }
+
+      p {
+        font-size: 11px;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+
+  .inferior {
+    flex-direction: column;
+    text-align: center;
+
+    h2 {
+      font-size: 11px;
+      margin: 10px;
+    }
+  }
+}
+
+/* 2. MÓVIL GRANDE / TABLET 481px - 768px */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .superior {
+    flex-direction: column;
+
+    .descripcion,
+    .contacto,
+    .horario {
+      width: 80%;
+      height: auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .descripcion {
+      h1 {
+        font-size: 18px;
+
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+
+      p {
+        font-size: 13px;
+        max-width: 80%;
+      }
+    }
+
+    .contacto {
+      h1 {
+        font-size: 18px;
+      }
+
+      li {
+        font-size: 13px;
+      }
+    }
+
+    .horario {
+      h1 {
+        font-size: 18px;
+      }
+
+      /* Aquí sí cabe en fila, solo se reduce el margen */
+      .atencion div {
+        margin-right: 20px;
+
+        h2,
+        h3 {
+          font-size: 13px;
+        }
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .inferior {
+    flex-direction: column;
+
+    h2 {
+      font-size: 12px;
+      margin: 15px;
+    }
+  }
+}
+
+/* 3. TABLET / LAPTOP 769px - 1024px */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    height: auto;
+    padding: 25px 0;
+  }
+
+  .superior {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .descripcion,
+    .contacto,
+    .horario {
+      width: 30%;
+      height: auto;
+    }
+
+    .descripcion {
+      h1 {
+        font-size: 18px;
+
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    .contacto {
+      h1 {
+        font-size: 18px;
+      }
+
+      li {
+        font-size: 13px;
+      }
+    }
+
+    .horario {
+      h1 {
+        font-size: 18px;
+      }
+
+      .atencion div {
+        margin-right: 20px;
+
+        h2,
+        h3 {
+          font-size: 13px;
+        }
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .inferior h2 {
+    font-size: 13px;
+    margin: 20px;
+  }
+}
+
+/* 4. ESCRITORIO — MÁS DE 1024px */
+
+@media (min-width: 1025px) {
+  .footer {
+    height: 270px;
+  }
+
+  .superior {
+    flex-direction: row;
+
+    .descripcion,
+    .contacto,
+    .horario {
+      width: 25%;
+    }
+  }
+}
