@@ -9,6 +9,10 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] })
   ],
   server: {
-    open: true
-  }
+    open: true,
+    watch: {
+      usePolling: true,
+      interval: 100,
+    },
+  },
 })

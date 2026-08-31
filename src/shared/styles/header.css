@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 /* Seccion de logo en el lateral izquierdo del navbar */
@@ -101,16 +103,18 @@
       transition: 0.3s;
     }
     .sesion {
-      width: 45px;
-      height: 45px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 5px;
-      background-color: #000000;
+      gap: 5px;
+      padding: 10px 12px;
+      background-color: #ec0001;
       color: white;
       text-decoration: none;
-      border-radius: 50%;
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      border-radius: 60px;
       transition: 0.3s;
     }
     .oscuro {
@@ -200,7 +204,11 @@
         padding: 7px 10px;
       }
 
-      .sesion,
+      .sesion {
+        padding: 7px 10px;
+        font-size: 11px;
+      }
+
       .oscuro {
         width: 38px;
         height: 38px;
@@ -222,7 +230,7 @@
     width: 30%;
 
     .logo {
-      width: 35px;
+      width: 55px;
       height: 50px;
       margin: 5px;
     }
@@ -270,7 +278,11 @@
         padding: 7px 9px;
       }
 
-      .sesion,
+      .sesion {
+        padding: 7px 10px;
+        font-size: 11px;
+      }
+
       .oscuro {
         width: 38px;
         height: 38px;
@@ -292,7 +304,7 @@
     width: 28%;
 
     .logo {
-      width: 45px;
+      width: 55px;
       height: 55px;
       margin: 5px;
     }
@@ -340,10 +352,88 @@
         padding: 8px 10px;
       }
 
-      .sesion,
+      .sesion {
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+
       .oscuro {
         width: 42px;
         height: 42px;
+      }
+    }
+  }
+}
+
+/* 4. ESCRITORIO — MÁS DE 1024px */
+
+@media (min-width: 1025px) {
+  .header {
+    height: 80px;
+  }
+
+  /* LOGO */
+
+  .header_logo {
+    width: 30%;
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      margin: 5px;
+    }
+
+    .logo_text {
+      h1 {
+        font-size: 17px;
+      }
+
+      p {
+        font-size: 11px;
+      }
+    }
+  }
+
+  /* MENÚ */
+
+  .header_menu {
+    width: 40%;
+
+    .menu {
+      ul {
+        padding: 0;
+      }
+
+      li {
+        padding: 0 10px;
+      }
+
+      a {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  /* OPCIONES */
+
+  .header_opciones {
+    width: 30%;
+
+    .opciones {
+      .carrito {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
+      .sesion {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+      .oscuro {
+        width: 45px;
+        height: 45px;
       }
     }
   }
