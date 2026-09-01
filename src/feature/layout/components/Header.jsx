@@ -13,7 +13,7 @@ return (
             <img className='logo' src="img/Logo.png" alt="S.I.V.Pro" />
             <div className='logo_text'>
                 <h1>La Sirena</h1>
-                <p>Pizza . desde 1994</p>
+                <p>Pizza · desde 1994</p>
             </div>
         </section>
 

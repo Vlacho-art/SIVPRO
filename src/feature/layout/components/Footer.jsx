@@ -52,7 +52,7 @@ export const Footer = () => {
       {/* parte inferior del Footer */}
       <section className='inferior'>
 
-        <h2>© 2026 La Sirena Pizza . Medellin, Colombia . Desde 1994</h2>
+        <h2>© 2026 La Sirena Pizza · Medellin, Colombia · Desde 1994</h2>
 
         <h2>NIT: 900.123.456-7. Establecimiento de comercio registrado</h2>
 
