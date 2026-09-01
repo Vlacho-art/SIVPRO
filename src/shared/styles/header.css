@@ -1,4 +1,5 @@
 .header {
+  background-color: #ffffff;
   width: 100%;
   height: 80px;
   display: flex;
@@ -6,6 +7,11 @@
   align-items: center;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 /* Seccion de logo en el lateral izquierdo del navbar */
@@ -94,7 +100,7 @@
       margin: 5px;
       gap: 5px;
       padding: 8px 12px;
-      background-color: #ec0001;
+      background-color: #df382a;
       color: white;
       text-decoration: none;
       font-family: "Montserrat", sans-serif;
@@ -109,7 +115,7 @@
       margin: 5px;
       gap: 5px;
       padding: 10px 12px;
-      background-color: #ec0001;
+      background-color: #df382a;
       color: white;
       text-decoration: none;
       font-family: "Montserrat", sans-serif;
