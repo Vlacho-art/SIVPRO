@@ -5,7 +5,8 @@ main {
 
 .logo-fondo {
   width: 100%;
-  height: 850px;
+  min-height: 850px;
+  height: auto;
   background-image: url(/public/img/header_pizza.png);
   background-size: cover;
   background-position: center;
@@ -15,8 +16,8 @@ main {
   align-items: center;
 
   .descripcion {
-    width: 40%;
-    height: 85%;
+    box-sizing: border-box;
+    width: 45%;
     margin: 5%;
     display: flex;
     justify-content: center;
@@ -28,6 +29,7 @@ main {
       font-family: poppins;
       color: #ffffff;
       padding: 6px;
+      margin-bottom: 7%;
       background-color: #df382a;
       border-radius: 60px;
       font-size: 14px;
@@ -41,7 +43,7 @@ main {
 
     .rojo {
       color: #df382a;
-      font-size: 88px;
+      font-size: 78px;
       font-family: Montserrat;
     }
 
@@ -49,26 +51,35 @@ main {
       color: #a7a2a2;
       font-size: 22px;
       font-family: poppins;
-      max-width: 85%;
+      max-width: 75%;
       margin: 15px;
     }
 
     .botones {
+      box-sizing: border-box;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: flex-start;
+      gap: 12px;
       width: 80%;
       height: auto;
       margin-top: 20px;
 
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+
       .button1 {
+        box-sizing: border-box;
         font-family: poppins;
         font-size: 16px;
         background-color: #df382a;
         color: #ffffff;
         border: none;
-        margin: 10px;
         width: 33%;
+        min-width: 120px;
         height: 60px;
         display: flex;
         align-items: center;
@@ -81,13 +92,14 @@ main {
       }
 
       .button2 {
+        box-sizing: border-box;
         font-family: poppins;
         font-size: 16px;
         background-color: transparent;
         color: #ffffff;
         border: 2px solid #ffffff;
-        margin: 10px;
         width: 45%;
+        min-width: 140px;
         height: 60px;
         display: flex;
         align-items: center;
@@ -97,11 +109,12 @@ main {
     }
 
     .info {
+      box-sizing: border-box;
       background-color: #1b1b19;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 80%;
+      width: 90%;
       margin-top: 20px;
       border: #5c5c5c 1px solid;
       border-radius: 20px;
@@ -112,24 +125,115 @@ main {
         .info-h1 {
           font-family: poppins;
           text-align: center;
-          font-size: 28 px;
+          font-size: 28px;
           color: #ffffff;
         }
 
         .info-p {
           font-family: poppins;
           text-align: center;
-          font-size: 13 px;
+          font-size: 13px;
           color: #a7a2a2;
         }
       }
 
       hr {
-        height: 50%;
+        align-self: stretch;
         width: 0;
         border: none;
         border-left: 1px solid #5c5c5c;
-        align-self: center;
+        margin: 16px 0;
+      }
+    }
+  }
+}
+
+.seccion-roja {
+  width: 100%;
+  height: 250px;
+  background-color: #dc2626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    margin: 5%;
+
+    .seccion-roja-h1 {
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      color: #ffffff;
+      font-size: 36px;
+    }
+
+    .seccion-roja-p {
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      color: #ffffff;
+    }
+  }
+}
+
+.categorias {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .categorias-h1 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 44px;
+    margin: 5px;
+  }
+
+  .categorias-p {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    margin: 5px;
+  }
+
+  .categorias-contenido {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+
+    .card {
+      width: 25%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 20px;
+      border-radius: 30px;
+      box-shadow: 1px 2px 0.2px 0 rgba(177, 177, 177, 0.5);
+      cursor: pointer;
+
+      .category-emoji {
+        font-size: 40px;
+        line-height: 1;
+        display: block;
+        margin-bottom: 10%;
+      }
+
+      .card-p {
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+        box-shadow: 2px 2px 2px 2px rgba(177, 177, 177, 0.5);
       }
     }
   }
@@ -139,7 +243,7 @@ main {
 
 @media (max-width: 480px) {
   main {
-    margin-top: 55px;
+    margin-top: 65px;
     flex-direction: column;
   }
 
@@ -181,12 +285,14 @@ main {
       .botones {
         width: 100%;
         flex-direction: column;
+        gap: 10px;
 
         .button1,
         .button2 {
-          width: 90%;
+          width: 100%;
+          min-width: 0;
           height: 50px;
-          margin: 5px;
+          margin: 0;
           font-size: 14px;
         }
       }
@@ -208,7 +314,60 @@ main {
         }
 
         hr {
-          height: 50%;
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+
+  .seccion-roja {
+    width: 100%;
+    height: 220px;
+
+    div {
+      margin: 5%;
+
+      .seccion-roja-h1 {
+        font-size: 28px;
+      }
+
+      .seccion-roja-p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .categorias {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+
+    .categorias-h1 {
+      font-size: 30px;
+    }
+
+    .categorias-p {
+      font-size: 15px;
+    }
+
+    .categorias-contenido {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      margin: 20px 0;
+
+      .card {
+        width: 80%;
+        height: 150px;
+        margin: 10px;
+
+        .category-emoji {
+          font-size: 35px;
+          margin-bottom: 5%;
+        }
+
+        .card-p {
+          font-size: 15px;
         }
       }
     }
@@ -219,12 +378,13 @@ main {
 
 @media (min-width: 481px) and (max-width: 768px) {
   main {
-    margin-top: 55px;
+    margin-top: 75px;
     flex-direction: column;
   }
 
   .logo-fondo {
-    height: 800px;
+    min-height: 800px;
+    height: auto;
 
     .descripcion {
       width: 75%;
@@ -247,14 +407,17 @@ main {
 
       .botones {
         width: 90%;
+        gap: 10px;
 
         .button1 {
           width: 40%;
+          min-width: 110px;
           height: 55px;
         }
 
         .button2 {
           width: 50%;
+          min-width: 130px;
           height: 55px;
         }
       }
@@ -276,27 +439,82 @@ main {
       }
     }
   }
+
+  .seccion-roja {
+    width: 100%;
+    height: 230px;
+
+    div {
+      margin: 5%;
+
+      .seccion-roja-h1 {
+        font-size: 32px;
+      }
+
+      .seccion-roja-p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .categorias {
+    width: 100%;
+    height: auto;
+    padding: 35px 0;
+
+    .categorias-h1 {
+      font-size: 36px;
+    }
+
+    .categorias-p {
+      font-size: 16px;
+    }
+
+    .categorias-contenido {
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 20px 0;
+
+      .card {
+        width: 40%;
+        height: 170px;
+        margin: 10px;
+
+        .category-emoji {
+          font-size: 38px;
+          margin-bottom: 5%;
+        }
+
+        .card-p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
 
 /* 3. TABLET / LAPTOP — 769px - 1024px */
 
 @media (min-width: 769px) and (max-width: 1024px) {
   main {
-    margin-top: 55px;
+    margin-top: 85px;
     flex-direction: column;
   }
 
   .logo-fondo {
-    height: 800px;
+    min-height: 800px;
+    height: auto;
 
     .descripcion {
-      width: 55%;
+      width: 65%;
       margin: 5%;
       padding: 20px;
 
       .descripcion-h1,
       .rojo {
-        font-size: 70px;
+        font-size: 65px;
       }
 
       .descripcion-p {
@@ -305,18 +523,85 @@ main {
 
       .botones {
         width: 90%;
+        gap: 10px;
 
         .button1 {
           width: 38%;
+          min-width: 120px;
         }
 
         .button2 {
           width: 48%;
+          min-width: 140px;
         }
       }
 
       .info {
         width: 90%;
+
+        .info-texto {
+          .info-h1 {
+            font-size: 25px;
+          }
+
+          .info-p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .seccion-roja {
+    width: 100%;
+    height: 240px;
+
+    div {
+      margin: 5%;
+
+      .seccion-roja-h1 {
+        font-size: 34px;
+      }
+
+      .seccion-roja-p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .categorias {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+
+    .categorias-h1 {
+      font-size: 40px;
+    }
+
+    .categorias-p {
+      font-size: 17px;
+    }
+
+    .categorias-contenido {
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 20px 0;
+
+      .card {
+        width: 25%;
+        height: 180px;
+        margin: 15px;
+
+        .category-emoji {
+          font-size: 40px;
+          margin-bottom: 8%;
+        }
+
+        .card-p {
+          font-size: 17px;
+        }
       }
     }
   }
@@ -332,8 +617,9 @@ main {
 
   .logo-fondo {
     width: 100%;
-    height: 950px;
-    background-image: url(/public/img/header_pizza.png);
+    min-height: 950px;
+    height: auto;
+    background-image: url(/img/header_pizza.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -342,8 +628,7 @@ main {
     align-items: center;
 
     .descripcion {
-      width: 40%;
-      height: 85%;
+      width: 45%;
       margin: 5%;
       display: flex;
       justify-content: center;
@@ -355,7 +640,8 @@ main {
         font-family: poppins;
         color: #ffffff;
         padding: 6px;
-        background-color: red;
+        margin-bottom: 7%;
+        background-color: #df382a;
         border-radius: 60px;
         font-size: 14px;
       }
@@ -367,34 +653,41 @@ main {
       }
 
       .rojo {
-        color: #ff0000;
-        font-size: 88px;
+        color: #df382a;
+        font-size: 78px;
       }
 
       .descripcion-p {
         color: #a7a2a2;
         font-size: 22px;
         font-family: poppins;
-        max-width: 85%;
+        max-width: 75%;
         margin: 15px;
       }
 
       .botones {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: flex-start;
+        gap: 12px;
         width: 80%;
         height: auto;
         margin-top: 20px;
 
+        a {
+          text-decoration: none;
+          color: #ffffff;
+        }
+
         .button1 {
           font-family: poppins;
           font-size: 16px;
-          background-color: #ff0000;
+          background-color: #df382a;
           color: #ffffff;
           border: none;
-          margin: 10px;
           width: 33%;
+          min-width: 130px;
           height: 60px;
           display: flex;
           align-items: center;
@@ -412,8 +705,8 @@ main {
           background-color: transparent;
           color: #ffffff;
           border: 2px solid #ffffff;
-          margin: 10px;
           width: 45%;
+          min-width: 150px;
           height: 60px;
           display: flex;
           align-items: center;
@@ -428,6 +721,7 @@ main {
         flex-direction: row;
         justify-content: space-between;
         width: 80%;
+        min-width: 80%;
         margin-top: 20px;
         border: #5c5c5c 1px solid;
         border-radius: 20px;
@@ -438,7 +732,7 @@ main {
           .info-h1 {
             font-family: poppins;
             text-align: center;
-            font-size: 28px;
+            font-size: 26px;
             color: #ffffff;
           }
 
@@ -451,11 +745,102 @@ main {
         }
 
         hr {
-          height: 50%;
+          align-self: stretch;
           width: 0;
           border: none;
           border-left: 1px solid #5c5c5c;
-          align-self: center;
+          margin: 16px 0;
+        }
+      }
+    }
+  }
+
+  .seccion-roja {
+    width: 100%;
+    height: 250px;
+    background-color: #dc2626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      margin: 5%;
+
+      .seccion-roja-h1 {
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        color: #ffffff;
+        font-size: 36px;
+      }
+
+      .seccion-roja-p {
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .categorias {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .categorias-h1 {
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-size: 44px;
+      margin: 5px;
+    }
+
+    .categorias-p {
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      margin: 5px;
+    }
+
+    .categorias-contenido {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin: 20px;
+
+      .card {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        border-radius: 30px;
+        box-shadow: 1px 2px 0.2px 0 rgba(177, 177, 177, 0.5);
+        cursor: pointer;
+
+        .category-emoji {
+          font-size: 40px;
+          line-height: 1;
+          display: block;
+          margin-bottom: 10%;
+        }
+
+        .card-p {
+          text-align: center;
+          font-family: "Montserrat", sans-serif;
+          font-size: 18px;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.3s;
+          box-shadow: 2px 2px 2px 2px rgba(177, 177, 177, 0.5);
         }
       }
     }

@@ -19,8 +19,8 @@ export const Content = () => {
             Ingredientes frescos, masa propia y treinta años de amor.
           </p>
           <div className='botones'>
-            <button className='button1'><ShoppingCartIcon className='icono-carrito' fontSize="small"/> Order ahora</button>
-            <button className='button2'>Ver Menu Completo →</button>
+            <button className='button1'><ShoppingCartIcon className='icono-carrito' fontSize="small"/><a href="">Order ahora</a></button>
+            <button className='button2'><a href="">Ver Menu Completo →</a></button>
           </div>
           <div className='info'>
               <div className='info-texto'>
@@ -30,7 +30,7 @@ export const Content = () => {
               <hr />
               <div className='info-texto'>
                 <h1 className='info-h1'>25 min</h1>
-                <p className='info-p'>Entrega promedia</p>
+                <p className='info-p'>Preparacion promedia</p>
               </div>
               <hr />
               <div className='info-texto'>
@@ -44,11 +44,40 @@ export const Content = () => {
       {/* cuadro rojo con tres informaciones */}
       <section className='seccion-roja'>
 
+        <div>
+          <h1 className='seccion-roja-h1'>📦 +5.200</h1>
+          <p className='seccion-roja-p'>Ventas entregadas</p>
+        </div>
+        <div>
+          <h1 className='seccion-roja-h1'>⚡25 min</h1>
+          <p className='seccion-roja-p'>Preparacion promedio</p>
+        </div>
+        <div>
+          <h1 className='seccion-roja-h1'>🏆 30 años</h1>
+          <p className='seccion-roja-p'>De tradición</p>
+        </div>
+
       </section>
 
       {/* categorias */}
       <section className='categorias'>
 
+        <h1 className='categorias-h1'>Nuestras categorías</h1>
+        <p className='categorias-p'>Descubre todo lo que tenemos para ti</p>
+        <div className='categorias-contenido'>
+          <div className='card'>
+            <span class="category-emoji">🍕</span>
+            <p className='card-p'>Pizzas</p>
+          </div>
+          <div className='card'>
+            <span class="category-emoji">🥤 </span>
+            <p className='card-p'>Bebidas</p>
+          </div>
+          <div className='card'>
+            <span class="category-emoji">🧇</span>
+            <p className='card-p'>Lasañas</p>
+          </div>
+        </div>
       </section>
 
       {/* favoritos de los clientes */}
