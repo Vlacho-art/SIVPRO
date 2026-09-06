@@ -11,7 +11,7 @@ const productos = [
         nombre: "Pepperoni",
         precioPersonal: "$ 14.000",
         precioGrande: "$ 18.000",
-        imagen: "/img/pizza_hawaii.png",
+        imagen: "/img/pizza_peperoni.png",
         descripcion: "Una pizza con salsa de tomate casera, mozzarella fresca y pepperoni."
       },
 
@@ -29,7 +29,7 @@ const productos = [
         nombre: "Pollo",
         precioPersonal: "$ 14.000",
         precioGrande: "$ 18.000",
-        imagen: "/img/pizza_hawaii.png",
+        imagen: "/img/pizza_pollo.png",
         descripcion: "Pizza con salsa de tomate casera, mozzarella y tiernos trozos de pollo."
       },
 
@@ -38,7 +38,7 @@ const productos = [
         nombre: "Tocineta",
         precioPersonal: "$ 14.000",
         precioGrande: "$ 18.000",
-        imagen: "/img/pizza_hawaii.png",
+        imagen: "/img/pizza_tocineta.png",
         descripcion: "Una pizza con salsa de tomate, mozzarella y trozos de tocineta."
       }
     ];
@@ -153,7 +153,30 @@ const productos = [
 
       {/* nuestra historia */}
       <section className='nuestra-historia'>
-
+        <div className='nuestra-historia-secciones'>
+          <div className='nuestra-historia-img'>
+            <div className='nuestra-historia-perfil'>
+              <h2 className='nuestra-historia-perfil-h2'>G</h2>
+              <div className='nuestra-historia-perfil-text'>
+                <h1 className='nuestra-historia-perfil-h1'>Gloria Inés Vargas</h1>
+                <p className='nuestra-historia-perfil-p'>Fundadora · La Sirena Pizza 1994</p>
+              </div>
+            </div>
+          </div>
+          <div className='nuestra-historia-text'>
+            <p className='nuestra-historia-text-p1'>Nuestra historia</p>
+            <h1 className='nuestra-historia-text-h1'>30 años de pasión por la pizza artesanal</h1>
+            <p className='nuestra-historia-text-p2'>En 1994, Gloria Inés abrió La Sirena con una receta familiar y el sueño de compartir el mejor 
+              sabor con Medellín. Hoy, tres décadas después, seguimos horneando cada pizza con el mismo amor
+              de siempre.</p>
+              <p className='nuestra-historia-text-p2'>Masa elaborada a mano, ingredientes seleccionados y el secreto inconfesable de 
+              nuestra salsa artesanal. Eso es La Sirena.</p>
+            <div className='nuestra-historia-text-a'>
+              <button className='button-text-a1'><a className='text-a1' href="">🍕 Pedir ahora</a></button>
+              <button className='button-text-a2'><a className='text-a2' href="">📞 Llamar</a></button>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* porque la sirena */}
