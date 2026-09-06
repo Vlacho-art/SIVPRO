@@ -2,8 +2,46 @@ import React from 'react'
 import '../../../shared/styles/content.css'
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import StarIcon from '@mui/icons-material/Star';
 
 export const Content = () => {
+const productos = [
+      {
+        id: 1,
+        nombre: "Pepperoni",
+        precioPersonal: "$ 14.000",
+        precioGrande: "$ 18.000",
+        imagen: "/img/pizza_hawaii.png",
+        descripcion: "Una pizza con salsa de tomate casera, mozzarella fresca y pepperoni."
+      },
+
+      {
+        id: 2,
+        nombre: "Hawaiana",
+        precioPersonal: "$ 14.000",
+        precioGrande: "$ 18.000",
+        imagen: "/img/pizza_hawaii.png",
+        descripcion: "Una deliciosa combinación de salsa de tomate, mozzarella, jamón y piña."
+      },
+
+      {
+        id: 3,
+        nombre: "Pollo",
+        precioPersonal: "$ 14.000",
+        precioGrande: "$ 18.000",
+        imagen: "/img/pizza_hawaii.png",
+        descripcion: "Pizza con salsa de tomate casera, mozzarella y tiernos trozos de pollo."
+      },
+
+      {
+        id: 4,
+        nombre: "Tocineta",
+        precioPersonal: "$ 14.000",
+        precioGrande: "$ 18.000",
+        imagen: "/img/pizza_hawaii.png",
+        descripcion: "Una pizza con salsa de tomate, mozzarella y trozos de tocineta."
+      }
+    ];
   return (
     <main>
 
@@ -82,7 +120,35 @@ export const Content = () => {
 
       {/* favoritos de los clientes */}
       <section className='favoritos'>
+        <h1 className='favoritos-h1'>Las favoritas de nuestros clientes</h1>
+        <a href="" className='favoritos-a'>Ver todas →</a>
+        <div className='productos-contenedor'>
+              {productos.map((producto) => (
+            <div className="producto" key={producto.id}>
 
+              <div className="seccion-img" style={{ backgroundImage: `url(${producto.imagen})` }}>
+                <h1 className='img-h1'><StarIcon className='icono-StarIcon' fontSize="small"/>favorita</h1>
+              </div>
+
+              <div className='seccion-info'>
+                <h2 className='producto-h2'>{producto.nombre}</h2>
+
+              <p className='producto-p'>{producto.descripcion}</p>
+              </div>
+
+              <div className='seccion-precios'>
+                <p className='producto-precio'>
+                  {producto.precioPersonal.toLocaleString()}
+                </p>
+
+                <p className='producto-precio'>
+                  {producto.precioGrande.toLocaleString()}
+                </p>
+              </div>
+
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* nuestra historia */}
